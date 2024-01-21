@@ -1,19 +1,21 @@
-import ProductCard, {
-  ProductButtons,
+import {
+  ProductCard,
   ProductImage,
   ProductTitle,
-} from "../components/ProductCard";
+  ProductButtons,
+} from "../components";
+import "../styles/custom-styles.css";
 
 const product = {
   id: "1",
-  title: "Coffee Mug - card",
+  title: "Coffee Mug - Card",
   img: "./coffee-mug.png",
 };
 
-export default function ShoppingPage() {
+export const ShoppingPage = () => {
   return (
     <div>
-      <h1>Shopping Page</h1>
+      <h1>Shopping Store</h1>
       <hr />
 
       <div
@@ -24,17 +26,23 @@ export default function ShoppingPage() {
         }}
       >
         <ProductCard product={product}>
-          <ProductImage />
-          <ProductTitle title={product.title} />
-          <ProductButtons/>
+          <ProductCard.Image />
+          <ProductCard.Title title={"Hola Mundo"} />
+          <ProductCard.Buttons />
         </ProductCard>
 
-        {/* <ProductCard product={product}>
-          <ProductCard.image />
-          <ProductCard.title title={'Caffe de mocca'} />
-          <ProductCard.buttons/>
-        </ProductCard> */}
+        <ProductCard product={product} className="bg-dark text-white">
+          <ProductImage className="custom-image" />
+          <ProductTitle className="text-white" />
+          <ProductButtons className="custom-buttons" />
+        </ProductCard>
+
+        <ProductCard product={product} style={{ backgroundColor: "red" }}>
+          <ProductImage />
+          <ProductTitle />
+          <ProductButtons />
+        </ProductCard>
       </div>
     </div>
   );
-}
+};
