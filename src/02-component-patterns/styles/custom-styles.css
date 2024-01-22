@@ -15,3 +15,10 @@
 .custom-buttons button{
     color: white;
 }
+
+.shopping-cart{
+  position:fixed;
+  top:0px;
+  right:0px;
+  
+}

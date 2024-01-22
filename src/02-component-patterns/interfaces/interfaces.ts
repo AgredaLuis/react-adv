@@ -5,6 +5,7 @@ export interface ProductCardProps {
   children?: ReactElement | ReactElement[];
   className?: string;
   style?: React.CSSProperties;
+  onChange?: (arg: onChangeArgs) => void;
 }
 
 export interface Product {
@@ -19,3 +20,8 @@ export interface ProductContextProps {
   product: Product;
 }
 
+
+export interface onChangeArgs {
+  product : Product;
+  count: number;
+}
