@@ -5,7 +5,7 @@ export interface ProductCardProps {
   children?: ReactElement | ReactElement[];
   className?: string;
   style?: React.CSSProperties;
-  onChange?: (arg: onChangeArgs) => void;
+  onChange?: (args: onChangeArgs) => void;
 }
 
 export interface Product {
