@@ -2,11 +2,15 @@ import { ReactElement } from "react";
 
 export interface ProductCardProps {
   product: Product;
-  children?: ReactElement | ReactElement[];
+
+  /* children?: ReactElement | ReactElement[]; */
+  /* este children es para devolver JSX Element */
+  children?: () => JSX.Element
   className?: string;
   style?: React.CSSProperties;
   onChange?: (args: onChangeArgs) => void;
   value?: number;
+  initialValues?: InitialValues;
 }
 
 export interface Product {
@@ -29,4 +33,8 @@ export interface onChangeArgs {
 
 export interface ProductInCart extends Product {
   count: number;
+}
+export interface InitialValues {
+  count?: number;
+  maxCount?: number;
 }
