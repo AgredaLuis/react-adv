@@ -37,7 +37,7 @@ export const ShoppingPage = () => {
           <ProductButtons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard product={product} style={{ backgroundColor: "red" }}>
+        <ProductCard product={product} className="text-white" style={{ backgroundColor: "red" }}>
           <ProductImage />
           <ProductTitle />
           <ProductButtons />
